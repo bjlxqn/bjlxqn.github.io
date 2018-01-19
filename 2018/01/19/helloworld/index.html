@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>helloworld | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在每行的头添加字符，比如”HEAD”，命令如下：sed &amp;#39;s/^/HEAD&amp;amp;/g&amp;#39; test.file在每行的行尾添加字符，比如“TAIL”，命令如下：sed &amp;#39;s/$/&amp;amp;TAIL/g&amp;#39; test.file使用场景：  excel里的数字，当位数超过11位时，就会用带e的科学计数法显示。在数字前加 ` 符号可以解决这个问题。现在需求，把服务器的数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="helloworld">
+<meta property="og:url" content="http://yoursite.com/2018/01/19/helloworld/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在每行的头添加字符，比如”HEAD”，命令如下：sed &amp;#39;s/^/HEAD&amp;amp;/g&amp;#39; test.file在每行的行尾添加字符，比如“TAIL”，命令如下：sed &amp;#39;s/$/&amp;amp;TAIL/g&amp;#39; test.file使用场景：  excel里的数字，当位数超过11位时，就会用带e的科学计数法显示。在数字前加 ` 符号可以解决这个问题。现在需求，把服务器的数据库">
+<meta property="og:updated_time" content="2018-01-19T07:54:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="helloworld">
+<meta name="twitter:description" content="在每行的头添加字符，比如”HEAD”，命令如下：sed &amp;#39;s/^/HEAD&amp;amp;/g&amp;#39; test.file在每行的行尾添加字符，比如“TAIL”，命令如下：sed &amp;#39;s/$/&amp;amp;TAIL/g&amp;#39; test.file使用场景：  excel里的数字，当位数超过11位时，就会用带e的科学计数法显示。在数字前加 ` 符号可以解决这个问题。现在需求，把服务器的数据库">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/19/helloworld/" class="article-date">
+  <time datetime="2018-01-19T07:51:43.000Z" itemprop="datePublished">2018-01-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      helloworld
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在每行的头添加字符，比如”HEAD”，命令如下：<br><code>sed &#39;s/^/HEAD&amp;/g&#39; test.file</code><br>在每行的行尾添加字符，比如“TAIL”，命令如下：<br><code>sed &#39;s/$/&amp;TAIL/g&#39; test.file</code><br>使用场景：</p>
+<ul>
+<li><p>excel里的数字，当位数超过11位时，就会用带e的科学计数法显示。在数字前加 ` 符号可以解决这个问题。<br>现在需求，把服务器的数据库或者文本数据，简单处理后，导出excel文件。就可以用sed去处理。<br><strong>文本转excel的方法，单元格间用逗号分割（如下边的格式），改下文件名的后缀为.csv即可</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aaa,bbb,ccc</span><br><span class="line">ddd,eee,fff</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Unix系统里，每行结尾只有“&lt;换行&gt;”，即“\n”；Windows系统里面，每行结尾是“&lt;换行&gt;&lt;回 车&gt;”，即“\n\r”。一个直接后果是，Unix系统下的文件在Windows里打开的话，所有文字会变成一行；而Windows里的文件在Unix下打开的话，在每行的结尾可能会多出一个^M符号。<br>适合用sed去预处理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &apos;s/\r//&apos; test.file</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文本中字符传替换，适合sed处理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed &apos;s/from/to/g&apos;，</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>baobao<del>~</del><del>~</del></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/19/helloworld/" data-id="cjclp8oqf0001l7fyko2679xm" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/19/helloworld/">helloworld</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
